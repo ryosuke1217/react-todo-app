@@ -1,0 +1,65 @@
+.todo {
+  display: flex;
+  width: 100%;
+  min-height: 60px;
+  align-items: stretch;
+  border: 1px solid #ccc;
+  border-bottom: 0;
+}
+.todo:last-child {
+  border-bottom: 1px solid #ccc;
+}
+
+.todo .check {
+  width: 40px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: #00cc00;
+  font-weight: bold;
+  font-size: xx-large;
+}
+
+.todo .body {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  align-items: stretch;
+}
+
+.todo .actions {
+  width: 60px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.todo .body .header {
+  width: 100%;
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-start;
+  align-items: center;
+}
+
+.todo .body .header .date {
+  font-size: x-small;
+  padding: 4px;
+}
+
+.todo .body .content {
+  padding: 4px;
+}
+
+.todo .body textarea {
+  width: calc(100% - 12px);
+  height: 100%;
+  margin: 3px;
+}
+
+.btn {
+  width: 50px;
+  height: 50px;
+  margin: 5px;
+}

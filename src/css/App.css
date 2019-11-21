@@ -1,0 +1,10 @@
+.App {
+  padding: 10px;
+}
+
+.theme-selector {
+  padding: 10px;
+}
+.theme-selector label {
+  margin-left: 20px;
+}
