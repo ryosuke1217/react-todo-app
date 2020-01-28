@@ -30,6 +30,7 @@
     ]
   },
   "devDependencies": {
+    "@material-ui/core": "^4.7.0",
     "json-server": "^0.15.1"
   }
 }

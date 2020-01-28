@@ -2,10 +2,19 @@ import React, { useState, useContext } from 'react';
 import { ThemeContext } from '../App';
 import TodoForm from './TodoForm';
 import '../css/Todo.css';
+import Button from '@material-ui/core/Button';
+import { makeStyles } from '@material-ui/core/styles';
+
+const useStyles = makeStyles(theme => ({
+  margin: {
+    margin: theme.spacing(1),
+  },
+}));
 
 function Todo(props) {
   const [edit, setEdit] = useState(false);
   const theme = useContext(ThemeContext);
+  const classes = useStyles();
 
   const handleUpdate = data => {
     props.onSave(data);
@@ -34,8 +43,8 @@ function Todo(props) {
         </div>
         <div className="content">{props.content}</div>
       </div>
-      <button className="btn" onClick={() => setEdit(true)}>Edit</button>
-      <button className="btn" onClick={() => props.onDelete(props.ID)}>Delete</button>
+      <Button variant="contained" size="small" color="primary" className={classes.margin} onClick={() => setEdit(true)}>Edit</Button>
+      <Button variant="contained" size="small" color="secondary" className={classes.margin} onClick={() => props.onDelete(props.id)}>Delete</Button>
     </div>
   );
 }
